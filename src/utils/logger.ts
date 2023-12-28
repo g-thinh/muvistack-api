@@ -1,12 +1,12 @@
-import pino from "pino";
+import pino from 'pino'
 
 const logger = pino({
   transport: {
-    target: process.env.NODE_ENV !== "production" ? "pino-pretty" : "",
+    target: process.env.NODE_ENV !== 'production' ? 'pino-pretty' : '',
     options: {
-      colorize: true,
-    },
-  },
-});
+      colorize: true
+    }
+  }
+})
 
-export default logger;
+export default logger

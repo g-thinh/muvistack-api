@@ -1,9 +1,9 @@
-import { Router, Request, Response } from "express";
+import { Router, type Request, type Response } from 'express'
 
-const router = Router();
+const router = Router()
 
-router.get("/hello", (_req: Request, res: Response) => {
-  res.json({ message: "Hello, World!" });
-});
+router.get('/hello', (_req: Request, res: Response) => {
+  res.json({ message: 'Hello, World!' })
+})
 
-export default router;
+export default router
