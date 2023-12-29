@@ -1,5 +1,5 @@
 import express, { type Application } from 'express'
-import helloRoutes from './routes/helloRoutes'
+import accountsRoute from './routes/accountsRoute'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import helmet from 'helmet'
@@ -20,7 +20,7 @@ const configureMiddlewares = (app: Application): void => {
 }
 
 const configureRoutes = (app: Application): void => {
-  app.use('/', helloRoutes)
+  app.use('/', accountsRoute)
 }
 
 const configureApp = (): Application => {
