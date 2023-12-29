@@ -1,15 +1,16 @@
 import app from './app'
 import logger from './utils/logger'
+import config from './config/config'
 
-const PORT = process.env.PORT ?? 3000
-
-app.listen(PORT, () => {
-  logger.info(`Server is running on http://localhost:${PORT}`)
+app.listen(config.port, () => {
+  logger.info(`Server is running on http://localhost:${config.port}`)
 })
+
+const unexpectedErrorHandler = (err: unknown) => {
+  logger.error(err)
+  process.exit(1)
+}
 
 // Handle unhandled promise rejections
-process.on('unhandledRejection', (err) => {
-  console.error('Unhandled Rejection:', err)
-  // You might want to gracefully handle or log the error here
-  process.exit(1)
-})
+process.on('unhandledRejection', unexpectedErrorHandler)
+process.on('uncaughtException', unexpectedErrorHandler)

@@ -24,13 +24,13 @@ pnpm dev
 
 A list of planned and completed features relating to the architecture:
 
-- ❌ MySQL database: using a [Planetscale](https://planetscale.com/) serverless database
-- ❌ Type-safe ORM: using [DrizzleORM](https://orm.drizzle.team/)
+- ✅ MySQL database: using a [Planetscale](https://planetscale.com/) serverless database
+- ✅ Type-safe ORM: using [DrizzleORM](https://orm.drizzle.team/)
 - ❌ Authentication and authorization: using [passport](https://www.passportjs.org/)
 - ❌ Validation: using data validation with [Zod](https://zod.dev/)
 - ✅ Logging: using [Pino](https://github.com/pinojs/pino)
 - ❌ Testing: unit and integration tests using [Jest](https://jestjs.io/)
-- ❌ Error handling: centralized error handling mechanism with logging
+- ✅ Error handling: centralized error handling mechanism with logging
 - ❌ API documentation: with [swagger-jsdoc](https://github.com/Surnet/swagger-jsdoc) and [swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)
 - ✅ Dependency management: with [pnpm](https://pnpm.io/)
 - ✅ Environment variables: using [dotenv](https://github.com/motdotla/dotenv)
