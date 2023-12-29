@@ -8,4 +8,5 @@ export const accounts = mysqlTable('account', {
   createdAt: timestamp('added_at').defaultNow()
 })
 
-export type SelectAccount = InferSelectModel<typeof accounts>
+export type Account = InferSelectModel<typeof accounts>
+export type InsertAccount = InferSelectModel<typeof accounts>

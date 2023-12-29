@@ -1,10 +1,10 @@
 import { drizzle } from 'drizzle-orm/planetscale-serverless'
 import { connect } from '@planetscale/database'
 import * as schema from './schema'
-import 'dotenv/config'
+import config from '../config/config'
 
 const connection = connect({
-  url: process.env.DATABASE_URL
+  url: config.databaseUrl
 })
 
 const db = drizzle(connection, {
