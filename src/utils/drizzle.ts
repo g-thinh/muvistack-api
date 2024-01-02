@@ -1,14 +1,13 @@
 import { drizzle } from 'drizzle-orm/planetscale-serverless'
 import { connect } from '@planetscale/database'
-import * as schema from './schema'
-import config from '../config/config'
+import config from './config'
+
+import { accounts } from '@/api/accounts/account.model'
 
 const connection = connect({
   url: config.databaseUrl
 })
 
-const db = drizzle(connection, {
-  schema
+export const db = drizzle(connection, {
+  schema: { accounts }
 })
-
-export { db }

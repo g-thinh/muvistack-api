@@ -1,5 +1,5 @@
 import { NextFunction, type Request, type Response } from 'express'
-import { accountService } from '../services/account.service'
+import { accountService } from './account.service'
 
 export const getAccounts = async (
   _req: Request,
@@ -21,7 +21,7 @@ export const getAccountById = async (
 ): Promise<void> => {
   const accountId = parseInt(req.params.id)
   try {
-    const account = await accountService.getOne(accountId)
+    const account = await accountService.getById(accountId)
 
     res.json(account)
   } catch (e) {

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-import logger from '../utils/logger'
+import logger from './logger'
 
 function loadConfig() {
   if (process.env.NODE_ENV === 'production') {

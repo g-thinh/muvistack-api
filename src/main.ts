@@ -1,6 +1,6 @@
 import app from './app'
 import logger from './utils/logger'
-import config from './config/config'
+import config from './utils/config'
 
 app.listen(config.port, () => {
   logger.info(`Server is running on http://localhost:${config.port}`)
