@@ -4,7 +4,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import helmet from 'helmet'
 import logger, { pinoLoggerHandler } from './utils/logger'
-import { errorHandler } from './middlewares/error.middleware'
+import { errorMiddleware } from './middlewares/error.middleware'
 
 const configureMiddlewares = (app: Application): void => {
   app.use(bodyParser.json())
@@ -27,7 +27,7 @@ const configureApp = (): Application => {
   configureMiddlewares(app)
   configureRoutes(app)
 
-  app.use(errorHandler)
+  app.use(errorMiddleware)
 
   logger.info('App configured...')
 
