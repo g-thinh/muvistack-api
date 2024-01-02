@@ -7,11 +7,6 @@ import { ZodError } from 'zod'
 /**
  * Express middleware for handling and centralizing errors and sending appropriate responses.
  *
- * @param {AppError | ZodError} err - The error object to handle.
- * @param {Request} req - The Express request object.
- * @param {Response} res - The Express response object.
- * @param {NextFunction} next - The Express next function.
- *
  * @example
  * // Must be used as the LAST middleware in the stack to catch all errors.
  * app.use(errorMiddleware);

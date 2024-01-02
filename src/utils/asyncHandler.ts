@@ -9,9 +9,6 @@ type AsyncHandler<T = any> = (
 /**
  * A utility function to handle asynchronous route handlers by wrapping them in a try-catch block.
  *
- * @param {AsyncHandler<T>} handler - Async route handler
- * @returns {AsyncHandler} - A function that can be used as a route handler with consistent error handling.
- *
  *  * @example
  * // Using asyncHandler in a route
  * router.get(

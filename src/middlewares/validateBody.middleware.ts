@@ -1,20 +1,12 @@
 import { NextFunction, Request, Response } from 'express'
 import { ZodSchema } from 'zod'
 
-/**
- * Represents an Express request object extended with a validated body.
- *
- * @template T - The type of the validated body.
- */
 export interface ValidatedRequest<T> extends Request {
   validatedBody?: T
 }
 
 /**
  * Middleware function to validate the request body using a Zod schema.
- *
- * @template T - The type of the expected request body.
- * @param {ZodSchema<T>} schema - The Zod schema used for validating the request body.
  *
  * @example
  * // Using validateBodyMiddleware in a route
